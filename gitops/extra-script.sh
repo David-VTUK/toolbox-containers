@@ -9,4 +9,4 @@ sudo install -o root -g root -m 0755 argocd-linux-amd64 /usr/local/bin/argocd
 
 # Install Kustomise CLI
 curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash
-sudo install -o root -g root -m 0755 kustomise /usr/local/bin/kustomize
+sudo install -o root -g root -m 0755 kustomize /usr/local/bin/kustomize
