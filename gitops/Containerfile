@@ -1,0 +1,17 @@
+FROM registry.fedoraproject.org/fedora:42
+
+ARG NAME=fedora-toolbox-gitops
+ARG VERSION=42
+LABEL com.github.containers.toolbox="true" \
+      com.redhat.component="$NAME" \
+      name="$NAME" \
+      version="$VERSION" \
+      usage="This image is meant to be used with the toolbox(1) command" \
+      summary="Image for creating Fedora Toolbox containers" \
+
+RUN dnf -y upgrade
+RUN dnf -y swap coreutils-single coreutils-full
+COPY extra-packages /
+RUN dnf -y install $(<extra-packages)
+RUN rm /extra-packages
+RUN dnf clean all
