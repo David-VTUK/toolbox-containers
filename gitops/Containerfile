@@ -19,4 +19,4 @@ RUN rm /extra-packages
 RUN dnf clean all
 
 COPY extra-scipt.sh /
-RUN bash extra-script.sh
+RUN bash /extra-script.sh
