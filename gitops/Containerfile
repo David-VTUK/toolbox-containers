@@ -19,5 +19,5 @@ RUN rm /extra-packages
 RUN dnf clean all
 
 COPY extra-scipt.sh /
-RUN chmod +x extra-script.sh
+RUN chmod +x /extra-script.sh
 RUN bash extra-script.sh
